@@ -11,8 +11,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Accepter les licences Android
-        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+      - uses: android-actions/setup-android@v3
       - uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: 8.2
